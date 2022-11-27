@@ -1,11 +1,16 @@
 import TelegramBot from "node-telegram-bot-api";
 import fetch from "node-fetch";
 import dotenv from "dotenv";
-import users from "./users.json" assert { type: "json" };
+
 import fs from "fs";
 import { getTweets } from "./functions.js";
 
 dotenv.config();
+
+const loadJSON = (path) =>
+  JSON.parse(fs.readFileSync(new URL(path, import.meta.url)));
+
+const users = loadJSON("./users.json");
 
 const token = process.env.TELEGRAM_KEY;
 // Default chat id
