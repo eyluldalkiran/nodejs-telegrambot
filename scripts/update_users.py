@@ -7,8 +7,6 @@ f = open("../users.json")
 data = json.load(f)
 
 for i in data:
-    # print("i is 1!")
-    # print('Token: ' + config('TWITTER_BEARER_TOKEN'))
     headers = {'Authorization': 'Bearer ' + config('TWITTER_BEARER_TOKEN')}
     res = requests.get('https://api.twitter.com/2/users/' +
                        i['id'] + '/tweets?tweet.fields=text,entities&exclude=replies,retweets&max_results=5', headers=headers)
