@@ -92,4 +92,4 @@ setInterval(async () => {
       fs.writeFileSync("./users.json", JSON.stringify(users));
     }
   }
-}, 30000);
+}, 40000);
