@@ -9,7 +9,6 @@ async function getTweets(twitterURL) {
   });
 
   const data = await response.json();
-  console.log("Data: " + JSON.stringify(data));
   return data;
 }
 

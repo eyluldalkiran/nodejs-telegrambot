@@ -24,6 +24,7 @@ const url = "https://www.binance.com";
 let userID = "";
 
 setInterval(async () => {
+  console.log("api running....");
   // Loop through users from users.json, get their tweets and send them to the channel
   for (let i = 0; i < users.length; i++) {
     // Get the user's id
@@ -92,4 +93,4 @@ setInterval(async () => {
       fs.writeFileSync("./users.json", JSON.stringify(users));
     }
   }
-}, 30000);
+}, 40000);
