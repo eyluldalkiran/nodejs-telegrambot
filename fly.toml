@@ -1,9 +1,12 @@
-# fly.toml file generated for nodejs-bot on 2022-11-28T22:35:58+03:00
+# fly.toml file generated for tweetforward on 2022-12-16T15:00:24+03:00
 
-app = "nodejs-bot"
+app = "tweetforward"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
+
+[build]
+  image = "flyio/hellofly:latest"
 
 [env]
   PORT = "8080"

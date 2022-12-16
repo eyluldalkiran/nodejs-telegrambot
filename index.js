@@ -14,7 +14,7 @@ const users = loadJSON("./users.json");
 
 const token = process.env.TELEGRAM_KEY;
 // Default chat id
-const chatId = -1001839332383;
+const chatId = -1001847605123;
 // Test chat id
 // const chatId = -1001847605123;
 
